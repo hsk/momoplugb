@@ -198,3 +198,57 @@ git checkout -b 5
 次に進みましょう。
 
 4章の変更は次のアドレスから見ることができます: https://github.com/hsk/momoplugb/compare/3..4
+## 5. githubで差分を見よう
+
+```
+git commit -a -m 5
+git checkout main
+git merge 5
+```
+
+githubに上げて、差分を見ながら作業をすると何かと便利です。この章ではgithubを利用する方法を説明します。
+githubでリポジトリを作ったら、
+
+```
+git remote add origin git@github.com:hsk/momoplugb.git
+git branch -M main
+git push -u origin main
+```
+
+としてサーバ上におきます。
+
+```
+git checkout 1
+git push
+```
+
+とすると
+
+```
+git push --set-upstream origin 1
+```
+
+と言われるので、--set-upstrem origin を加えてpushします。
+同様に、
+
+```
+git checkout 2
+git push --set-upstream origin 2
+git checkout 3
+git push --set-upstream origin 3
+git checkout 4
+git push --set-upstream origin 4
+git checkout 5
+git push --set-upstream origin 5
+```
+
+としてブランチをサーバ上に置きましょう。
+
+差分を以下のアドレスから見ることができます:
+
+- 1-2 https://github.com/hsk/momoplugb/compare/1..2
+- 2-3 https://github.com/hsk/momoplugb/compare/2..3
+- 3-4 https://github.com/hsk/momoplugb/compare/3..4
+- 4-5 https://github.com/hsk/momoplugb/compare/4..5
+
+5章の変更は次のアドレスから見ることができます: https://github.com/hsk/momoplugb/compare/4..5
