@@ -253,3 +253,10 @@ git push --set-upstream origin 5
 ```
 
 としてブランチをサーバ上に置きましょう。
+
+差分を以下のアドレスから見ることができます:
+
+- 1-2 https://github.com/hsk/momoplugb/compare/1..2
+- 2-3 https://github.com/hsk/momoplugb/compare/1..2
+- 3-4 https://github.com/hsk/momoplugb/compare/1..2
+- 4-5 https://github.com/hsk/momoplugb/compare/1..2
