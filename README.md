@@ -227,3 +227,8 @@ git push -u origin main
 ```
 
 としてサーバ上におきます。
+
+```
+git checkout 1
+git push
+```
