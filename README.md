@@ -63,3 +63,12 @@ git checkout 2
 ```
 
 として戻ってきましょう。
+
+次は３章を書きますよ。
+
+```
+git commit -a -m "2"
+git checkout -b 3
+```
+
+です。
