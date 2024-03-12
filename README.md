@@ -250,5 +250,134 @@ git push --set-upstream origin 5
 - 2-3 https://github.com/hsk/momoplugb/compare/2..3
 - 3-4 https://github.com/hsk/momoplugb/compare/3..4
 - 4-5 https://github.com/hsk/momoplugb/compare/4..5
+- 5-6 https://github.com/hsk/momoplugb/compare/5..6
 
 5章の変更は次のアドレスから見ることができます: https://github.com/hsk/momoplugb/compare/4..5
+
+# 6. 禁断の履歴書き換え
+
+履歴を完全に書き換えて最低限のものを残す方法を以下に示します。
+途中経過が消えてしまうので必要な場合のみ行ってください。
+
+ブランチを持ってくる
+
+```
+git pull origin 1:1
+git pull origin 2:2
+git pull origin 3:3
+git pull origin 4:4
+git pull origin 5:5
+git pull origin 6:6
+```
+
+空のブランチを作る
+
+```
+git checkout --orphan v0
+```
+
+他のブランチのファイルを全部上書帰してコミットする。(マージではなく展開するだけ)
+
+```
+git commit -a -m 0
+git checkout -b v1 && git checkout 1 . && git add . && git commit -a -m 1
+git checkout -b v2 && git checkout 2 . && git add . && git commit -a -m 2
+git checkout -b v3 && git checkout 3 . && git add . && git commit -a -m 3
+git checkout -b v4 && git checkout 4 . && git add . && git commit -a -m 4
+git checkout -b v5 && git checkout 5 . && git add . && git commit -a -m 5
+git checkout -b v6 && git checkout 6 . && git add . && git commit -a -m 6
+git checkout -b v7 && git checkout 7 . && git add . && git commit -a -m 7
+```
+
+ファイル内容修正作業用
+
+ファイル内容に変更がある場合はこちらを使うと便利です
+
+```
+git commit -a -m 0 && git checkout -b v1 && git checkout 1 . && git add . 
+git commit -a -m 1 && git checkout -b v2 && git checkout 2 . && git add .
+git commit -a -m 2 && git checkout -b v3 && git checkout 3 . && git add .
+git commit -a -m 3 && git checkout -b v4 && git checkout 4 . && git add .
+git commit -a -m 4 && git checkout -b v5 && git checkout 5 . && git add .
+git commit -a -m 5 && git checkout -b v6 && git checkout 6 . && git add .
+git commit -a -m 6 && git checkout -b v7 && git checkout 7 . && git add .
+git commit -a -m 7
+
+間違えたとき用
+
+git checkout main
+git branch -D v0
+git branch -D v1
+git branch -D v2
+git branch -D v3
+git branch -D v4
+git branch -D v5
+git branch -D v6
+git branch -D v7
+```
+
+古いブランチを消す
+
+```
+git branch -D 0
+git branch -D 1
+git branch -D 2
+git branch -D 3
+git branch -D 4
+git branch -D 5
+git branch -D 6
+git branch -D 7
+```
+
+新しいブランチに書き換える
+
+```
+git checkout v0 && git branch -m 0
+git checkout v1 && git branch -m 1
+git checkout v2 && git branch -m 2
+git checkout v3 && git branch -m 3
+git checkout v4 && git branch -m 4
+git checkout v5 && git branch -m 5
+git checkout v6 && git branch -m 6
+git checkout v7 && git branch -m 7
+```
+
+github上のブランチを上書きする
+
+```
+git checkout 0 && git push --set-upstream origin 0 --force
+git checkout 1 && git push --set-upstream origin 1 --force
+git checkout 2 && git push --set-upstream origin 2 --force
+git checkout 3 && git push --set-upstream origin 3 --force
+git checkout 4 && git push --set-upstream origin 4 --force
+git checkout 5 && git push --set-upstream origin 5 --force
+git checkout 6 && git push --set-upstream origin 6 --force
+git checkout 7 && git push --set-upstream origin 7 --force
+```
+
+mainに上書きしてしまう。
+
+```
+git checkout 7 && git checkout -B main
+```
+
+github上のmain を上書きする
+
+```
+git push --force
+```
+
+github上のブランチにpush
+
+```
+git checkout 0 && git push --set-upstream origin 0
+git checkout 1 && git push --set-upstream origin 1
+git checkout 2 && git push --set-upstream origin 2
+git checkout 3 && git push --set-upstream origin 3
+git checkout 4 && git push --set-upstream origin 4
+git checkout 5 && git push --set-upstream origin 5
+git checkout 6 && git push --set-upstream origin 6
+git checkout 7 && git push --set-upstream origin 7
+```
+
+6章の変更は次のアドレスから見ることができます: https://github.com/hsk/momoplugb/compare/5..6
