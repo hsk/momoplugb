@@ -103,7 +103,49 @@ git checkout 2
 2章にhaltを追加したので、
 
 ```
+git commit -a -m "3"
 git merge 2
 ```
 
 としてマージします。そのまえにコミットしてからだけどね。
+
+```
+git commit -a -m "3"
+git checkout main
+git merge 3
+git checkout 3
+```
+
+としてmainに3章までの変更をマージして戻ってきましょう。
+
+## 4. プログラムを加える。
+
+```
+git checkout -b 4
+```
+
+さあ、いつものようにブランチを切って、Prologのプログラムを２章と３章に加えていきましょう。
+
+```
+eval(I,I)    :- integer(I).                          % 整数
+eval(E1+E2,I):- eval(E1,I1),eval(E2,I2),I is I1+I2.  % 加算
+:- eval(1+2+3+4,R),writeln(R).
+:- halt.
+```
+
+を2章を見ながら、2.plとして保存します。
+
+```
+git commit -a -m "4"
+git checkout 2
+```
+
+としてからファイルを書き込み、
+
+```
+git add 2.pl
+git commit -a -m "2"
+git checkout 4
+```
+
+で戻ってきます。
