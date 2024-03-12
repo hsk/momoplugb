@@ -103,7 +103,6 @@ git checkout 2
 2章にhaltを追加したので、
 
 ```
-git commit -a -m "3"
 git merge 2
 ```
 
