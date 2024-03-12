@@ -117,3 +117,5 @@ git merge 2
 ```
 
 で実行することができます。
+
+3章の変更は次のアドレスから見ることができます: https://github.com/hsk/momoplugb/compare/2..3
