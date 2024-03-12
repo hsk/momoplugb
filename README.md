@@ -216,3 +216,14 @@ git merge 5
 ```
 
 ではまたあいましょう。
+
+あ、そうそう、githubにあげてませんでしたね。
+githubでリポジトリを作ったら、
+
+```
+git remote add origin git@github.com:hsk/momoplugb.git
+git branch -M main
+git push -u origin main
+```
+
+としてサーバ上におきます。
