@@ -79,8 +79,6 @@ git checkout -b 3
 です。
 
 2章の変更は次のアドレスから見ることができます: https://github.com/hsk/momoplugb/compare/1..2
-<<<<<<< HEAD
-
 ## 3. 引き算を加える。
 
 構文
