@@ -24,6 +24,7 @@ git checkout -b 2
 
 と書きます。それから２章を始めましょう。
 
+1章の変更は次のアドレスから見ることができます: https://github.com/hsk/momoplugb/compare/0..1
 ## 2. 構文を書こう
 
 
@@ -78,7 +79,6 @@ git checkout -b 3
 です。
 
 2章の変更は次のアドレスから見ることができます: https://github.com/hsk/momoplugb/compare/1..2
-
 ## 3. 引き算を加える。
 
 構文
