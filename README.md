@@ -25,3 +25,57 @@ git checkout -b 2
 と書きます。それから２章を書き始めましょう。
 
 1章の変更は次のアドレスから見ることができます: https://github.com/hsk/momoplugb/compare/0..1
+## 2. 構文を書こう
+
+
+BNFを数学的にチャカチャカと書きます。
+
+構文
+
+```
+e ::= i | e+e
+```
+
+ご覧のように足し算ができるだけの言語です。
+これを実装する言語は Prolog で書きます。
+
+評価規則
+
+```
+eval(I,I)    :- integer(I).                          % 整数
+eval(E1+E2,I):- eval(E1,I1),eval(E2,I2),I is I1+I2.  % 加算
+:- eval(1+2+3+4,R),writeln(R).
+:- halt.
+```
+
+Prologで評価規則を書くときれいに書けます。
+これだけですね。
+
+```
+git commit -a -m "2"
+```
+
+ここで時を戻してみましょう。
+
+```
+git checkout 1
+```
+
+とかくとこのコメントが消えて、１章だけの時代に戻ります。
+
+```
+git checkout 2
+```
+
+として戻ってきましょう。
+
+次は３章を書きますよ。
+
+```
+git commit -a -m "2"
+git checkout -b 3
+```
+
+です。
+
+2章の変更は次のアドレスから見ることができます: https://github.com/hsk/momoplugb/compare/1..2
