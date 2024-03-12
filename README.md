@@ -148,4 +148,9 @@ git commit -a -m "2"
 git checkout 4
 ```
 
-で戻ってきます。
+で戻ってきて、マージしちゃいましょう。
+
+
+```
+git merge 2
+```
