@@ -109,16 +109,6 @@ git merge 2
 
 としてマージします。そのまえにコミットしてからだけどね。
 
-<<<<<<< HEAD
-```
-git commit -a -m "3"
-git checkout main
-git merge 3
-git checkout 3
-```
-
-としてmainに3章までの変更をマージして戻ってきましょう。
-
 3.plに加えて
 
 ```
