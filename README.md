@@ -232,3 +232,24 @@ git push -u origin main
 git checkout 1
 git push
 ```
+
+とすると
+
+```
+git push --set-upstream origin 1
+```
+
+と言われるので、そうして戻ってきます。
+
+```
+git checkout 2
+git push --set-upstream origin 2
+git checkout 3
+git push --set-upstream origin 3
+git checkout 4
+git push --set-upstream origin 4
+git checkout 5
+git push --set-upstream origin 5
+```
+
+としてブランチをサーバ上に置きましょう。
