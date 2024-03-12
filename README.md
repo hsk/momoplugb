@@ -243,11 +243,15 @@ git push --set-upstream origin 5
 - 2-3 https://github.com/hsk/momoplugb/compare/2..3
 - 3-4 https://github.com/hsk/momoplugb/compare/3..4
 - 4-5 https://github.com/hsk/momoplugb/compare/4..5
+- 5-6 https://github.com/hsk/momoplugb/compare/5..6
 
 ## 6. まとめ
 
 ここではGITブランチを使ったプログラミング言語の作り方の作り方を書きました。
 実際に簡単な言語を作る方法を先に書いた後に、前の章に戻って文章やプログラムを加えるなどして修正もしてみました。
 この手法を用いれば１つのリポジトリ内で美しいプログラミング言語の作り方を書くことができます。
+
+実は筆者は恥ずかしいことにブランチを使いこなせているとは言えなかったのですが、この方法を思いついてやってみることでブランチをついに！使えるようになった気がします。
+
 是非試してみてください。
 ではまたあいましょう。
