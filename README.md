@@ -74,6 +74,8 @@ git checkout -b 3
 
 です。
 
+2章の変更は次のアドレスから見ることができます: https://github.com/hsk/momoplugb/compare/1..2
+
 ## 3. 引き算を加える。
 
 構文
@@ -118,6 +120,7 @@ git merge 2
 
 で実行することができます。
 
+3章の変更は次のアドレスから見ることができます: https://github.com/hsk/momoplugb/compare/2..3
 ## 4. プログラムを加える。
 
 ```
@@ -190,3 +193,5 @@ git checkout -b 5
 ```
 
 次に進みましょう。
+
+4章の変更は次のアドレスから見ることができます: https://github.com/hsk/momoplugb/compare/3..4
